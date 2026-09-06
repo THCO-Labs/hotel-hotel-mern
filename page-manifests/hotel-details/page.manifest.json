@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "hotel-details",
+  "route": "/hotels/:slug",
+  "title": "Hotel details and rooms",
+  "description": "Property page where guests review a hotel, its amenities and rooms, then choose a room to reserve.",
+  "sourceEntry": "client/src/pages/HotelDetailsPage.tsx",
+  "access": "public",
+  "routeParams": {
+    "slug": "evergreen-grand-hotel"
+  },
+  "dataDependencies": [
+    "hotels",
+    "rooms",
+    "availability"
+  ],
+  "componentDependencies": [
+    "client/src/features/hotels/RoomCard.tsx",
+    "client/src/components/hotel-art.tsx"
+  ],
+  "editableSections": [
+    "hotel.details"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "UPDATE_ASSET",
+    "CONFIGURE_COMPONENT",
+    "CREATE_COMPONENT_VARIANT"
+  ],
+  "featureSlots": [
+    "hotel.guest-experience"
+  ],
+  "preview": {
+    "url": "/hotels/evergreen-grand-hotel",
+    "fixture": "page-manifests/hotel-details/fixtures.json"
+  },
+  "verification": [
+    "hotel-details-render",
+    "reserve-links-work"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth",
+    "server/src/modules/hotels",
+    "server/src/modules/rooms"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Evergreen Stays",
+  "nameParts": {
+    "lead": "Evergreen",
+    "accent": "Stays"
+  },
+  "description": "Search forest-side hotels and cabins, see real availability, and reserve in under a minute — no card required.",
+  "tagline": "Reserve now, pay at the hotel",
+  "url": "https://evergreen-stays.example.com",
+  "logoPath": null,
+  "theme": "light"
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "dashboard-rooms",
+  "route": "/dashboard/rooms",
+  "title": "Manage rooms",
+  "description": "Staff editor for room inventory, capacity and nightly price.",
+  "sourceEntry": "client/src/pages/dashboard/RoomsPage.tsx",
+  "access": "staff",
+  "dataDependencies": [
+    "rooms",
+    "hotels"
+  ],
+  "componentDependencies": [
+    "client/src/features/dashboard/RoomForm.tsx"
+  ],
+  "editableSections": [
+    "dashboard.rooms"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [
+    "hotel.operations"
+  ],
+  "preview": {
+    "url": "/dashboard/rooms",
+    "fixture": "page-manifests/dashboard-rooms/fixtures.json"
+  },
+  "verification": [
+    "rooms-table-renders"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth",
+    "server/src/modules/rooms"
+  ]
+}

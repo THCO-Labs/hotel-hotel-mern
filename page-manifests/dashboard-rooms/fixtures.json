@@ -1,0 +1,4 @@
+{
+  "description": "Staff editor for room inventory, capacity and nightly price.",
+  "route": "/dashboard/rooms"
+}

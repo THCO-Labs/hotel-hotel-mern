@@ -1,0 +1,4 @@
+{
+  "description": "Reservation summary shared by the confirmation, lookup and account pages.",
+  "route": "/lookup"
+}

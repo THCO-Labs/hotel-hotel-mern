@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "dashboard-hotels",
+  "route": "/dashboard/hotels",
+  "title": "Manage hotels",
+  "description": "Staff editor for hotel records, descriptions and amenities.",
+  "sourceEntry": "client/src/pages/dashboard/HotelsPage.tsx",
+  "access": "staff",
+  "dataDependencies": [
+    "hotels"
+  ],
+  "componentDependencies": [
+    "client/src/features/dashboard/HotelForm.tsx"
+  ],
+  "editableSections": [
+    "dashboard.hotels"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [
+    "hotel.operations"
+  ],
+  "preview": {
+    "url": "/dashboard/hotels",
+    "fixture": "page-manifests/dashboard-hotels/fixtures.json"
+  },
+  "verification": [
+    "hotels-table-renders"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth",
+    "server/src/modules/hotels"
+  ]
+}

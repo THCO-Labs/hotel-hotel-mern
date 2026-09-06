@@ -1,0 +1,4 @@
+{
+  "description": "Public discovery page where guests learn about the brand, search availability, and begin a reservation.",
+  "route": "/"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "account",
+  "route": "/account",
+  "title": "Guest account",
+  "description": "Signed-in guest area listing the account's past and upcoming reservations.",
+  "sourceEntry": "client/src/pages/AccountPage.tsx",
+  "access": "guest",
+  "dataDependencies": [
+    "users",
+    "reservations"
+  ],
+  "componentDependencies": [],
+  "editableSections": [
+    "account.bookings"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [
+    "hotel.guest-experience"
+  ],
+  "preview": {
+    "url": "/account",
+    "fixture": "page-manifests/account/fixtures.json"
+  },
+  "verification": [
+    "account-requires-auth",
+    "account-lists-reservations"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth",
+    "server/src/modules/reservations"
+  ]
+}

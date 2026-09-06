@@ -1,0 +1,4 @@
+{
+  "description": "Public lookup where a guest retrieves an existing reservation using its reference and email.",
+  "route": "/lookup"
+}

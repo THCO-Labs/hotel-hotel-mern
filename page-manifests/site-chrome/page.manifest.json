@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "site-chrome",
+  "route": "/",
+  "title": "Site header & footer",
+  "description": "The header and footer that frame every guest page. Editing them here changes all of them at once, which is what site chrome is \u2014 that is why they are edited from here rather than from any single page. Wording and links can also be changed without code through the site.chrome configuration surface.",
+  "sourceEntry": "client/src/components/site-header.tsx",
+  "access": "public",
+  "dataDependencies": [],
+  "componentDependencies": [
+    "client/src/components/site-footer.tsx"
+  ],
+  "editableSections": [
+    "site.header",
+    "site.footer"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [],
+  "preview": {
+    "url": "/",
+    "fixture": "page-manifests/site-chrome/fixtures.json"
+  },
+  "verification": [
+    "header-renders",
+    "footer-renders"
+  ],
+  "protectedDependencies": [
+    "client/src/config/app-config.ts",
+    "client/src/navigation"
+  ]
+}

@@ -1,0 +1,210 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Dark mode is class-driven: the ThemeProvider toggles `.dark` on <html>. */
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------------
+   Design tokens — "Forest Earth"
+   Palette anchors: #f7fee7 · #ffffff · #4d7c0f · #1a2e05
+   Every token is a semantic name. Components never reference raw colours, so
+   re-theming the whole template means editing only the two blocks below.
+--------------------------------------------------------------------------- */
+:root {
+  --background: hsl(79 92% 95%); /* #f7fee7 */
+  --foreground: hsl(89 80% 10%); /* #1a2e05 */
+  --card: hsl(0 0% 100%); /* #ffffff */
+  --card-foreground: hsl(89 80% 10%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(89 80% 10%);
+  --primary: hsl(84 81% 27%); /* #4d7c0f */
+  --primary-foreground: hsl(79 92% 95%);
+  --secondary: hsl(82 45% 91%);
+  --secondary-foreground: hsl(89 70% 14%);
+  --muted: hsl(82 38% 92%);
+  --muted-foreground: hsl(87 28% 38%);
+  --accent: hsl(84 45% 88%);
+  --accent-foreground: hsl(84 70% 18%);
+  --destructive: hsl(0 72% 47%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --success: hsl(142 60% 30%);
+  --success-foreground: hsl(0 0% 100%);
+  --border: hsl(84 30% 84%);
+  --input: hsl(84 30% 84%);
+  --ring: hsl(84 81% 27%);
+  --radius: 0.625rem;
+
+  /* Sidebar surface (dashboard shell) */
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(89 80% 10%);
+  --sidebar-primary: hsl(84 81% 27%);
+  --sidebar-primary-foreground: hsl(79 92% 95%);
+  --sidebar-accent: hsl(84 45% 88%);
+  --sidebar-accent-foreground: hsl(84 70% 18%);
+  --sidebar-border: hsl(84 30% 84%);
+  --sidebar-ring: hsl(84 81% 27%);
+
+  /* Chart series */
+  --chart-1: hsl(84 81% 27%);
+  --chart-2: hsl(84 81% 44%);
+  --chart-3: hsl(38 92% 50%);
+  --chart-4: hsl(199 89% 48%);
+  --chart-5: hsl(25 60% 45%);
+
+  /* Brand ramp — kept from the original theme for gradients and art. */
+  --brand-50: #f7fee7;
+  --brand-100: #ecfccb;
+  --brand-200: #d9f99d;
+  --brand-300: #bef264;
+  --brand-400: #a3e635;
+  --brand-500: #84cc16;
+  --brand-600: #65a30d;
+  --brand-700: #4d7c0f;
+  --brand-800: #3f6212;
+  --brand-900: #365314;
+  --brand-950: #1a2e05;
+}
+
+.dark {
+  --background: hsl(89 80% 10%); /* #1a2e05 */
+  --foreground: hsl(79 92% 95%); /* #f7fee7 */
+  --card: hsl(87 82% 13%); /* #243c06 */
+  --card-foreground: hsl(79 92% 95%);
+  --popover: hsl(87 82% 13%);
+  --popover-foreground: hsl(79 92% 95%);
+  --primary: hsl(84 81% 44%); /* #84cc16 */
+  --primary-foreground: hsl(89 80% 10%);
+  --secondary: hsl(86 45% 19%);
+  --secondary-foreground: hsl(79 92% 92%);
+  --muted: hsl(86 40% 18%);
+  --muted-foreground: hsl(84 22% 68%);
+  --accent: hsl(86 40% 22%);
+  --accent-foreground: hsl(79 92% 92%);
+  --destructive: hsl(0 62% 45%);
+  --success: hsl(142 55% 55%);
+  --success-foreground: hsl(20 20% 8%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(86 38% 22%);
+  --input: hsl(86 38% 22%);
+  --ring: hsl(84 81% 44%);
+
+  --sidebar: hsl(87 82% 13%);
+  --sidebar-foreground: hsl(79 92% 95%);
+  --sidebar-primary: hsl(84 81% 44%);
+  --sidebar-primary-foreground: hsl(89 80% 10%);
+  --sidebar-accent: hsl(86 40% 22%);
+  --sidebar-accent-foreground: hsl(79 92% 92%);
+  --sidebar-border: hsl(86 38% 22%);
+  --sidebar-ring: hsl(84 81% 44%);
+
+  --chart-1: hsl(84 81% 44%);
+  --chart-2: hsl(82 65% 60%);
+  --chart-3: hsl(38 92% 60%);
+  --chart-4: hsl(199 89% 60%);
+  --chart-5: hsl(25 60% 60%);
+}
+
+/* @generated:theme-start */
+/* @generated:theme-end */
+
+/* ---------------------------------------------------------------------------
+   Tailwind theme mapping — turns the tokens above into utilities
+   (bg-background, text-muted-foreground, border-border, rounded-lg, …).
+--------------------------------------------------------------------------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-soft: 0 10px 30px -12px rgb(26 46 5 / 0.18);
+  --shadow-soft-lg: 0 20px 45px -18px rgb(26 46 5 / 0.28);
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Native date inputs sit inside the design system, so tint their picker. */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    @apply cursor-pointer opacity-60;
+  }
+
+  .dark input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  width: 100%;
+  max-width: 1200px;
+
+  @media (width >= 640px) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (width >= 1024px) {
+    padding-inline: 2rem;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "reservation-card",
+  "route": "/lookup",
+  "title": "Reservation summary card",
+  "description": "The block of reservation facts \u2014 reference, dates, guests, room and total \u2014 shown on the confirmation page, the booking lookup page and the guest account page. It is one component with three callers, so it is edited here rather than from any one of those pages: an edit made from a page would look local and would in fact change all three.",
+  "sourceEntry": "client/src/features/booking/ReservationDetails.tsx",
+  "access": "public",
+  "dataDependencies": [
+    "reservations"
+  ],
+  "componentDependencies": [],
+  "editableSections": [
+    "reservation.card"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [
+    "hotel.guest-experience"
+  ],
+  "preview": {
+    "url": "/lookup",
+    "fixture": "page-manifests/reservation-card/fixtures.json"
+  },
+  "verification": [
+    "reservation-card-renders"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth",
+    "server/src/modules/reservations"
+  ]
+}

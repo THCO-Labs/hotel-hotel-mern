@@ -1,0 +1,8 @@
+{
+  "description": "Search results showing hotels and room availability matching the guest's city, dates and party size.",
+  "route": "/search",
+  "query": {
+    "city": "Portland",
+    "guests": "2"
+  }
+}

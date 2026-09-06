@@ -1,0 +1,7 @@
+{
+  "description": "Confirmation screen shown after a reservation is created, displaying the booking reference and stay details.",
+  "route": "/booking/confirmation/DEMO-REFERENCE",
+  "routeParams": {
+    "reference": "DEMO-REFERENCE"
+  }
+}

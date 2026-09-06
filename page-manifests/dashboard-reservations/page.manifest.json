@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "dashboard-reservations",
+  "route": "/dashboard/reservations",
+  "title": "Manage reservations",
+  "description": "Staff table of reservations with status management.",
+  "sourceEntry": "client/src/pages/dashboard/ReservationsPage.tsx",
+  "access": "staff",
+  "dataDependencies": [
+    "reservations"
+  ],
+  "componentDependencies": [],
+  "editableSections": [
+    "dashboard.reservations"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [
+    "hotel.operations"
+  ],
+  "preview": {
+    "url": "/dashboard/reservations",
+    "fixture": "page-manifests/dashboard-reservations/fixtures.json"
+  },
+  "verification": [
+    "reservations-table-renders"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth",
+    "server/src/modules/reservations"
+  ]
+}

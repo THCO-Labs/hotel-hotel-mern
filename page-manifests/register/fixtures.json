@@ -1,0 +1,4 @@
+{
+  "description": "Guest sign-up capturing name, email and password.",
+  "route": "/register"
+}

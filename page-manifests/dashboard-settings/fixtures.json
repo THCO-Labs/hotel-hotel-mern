@@ -1,0 +1,4 @@
+{
+  "description": "Staff settings screen for property-level preferences.",
+  "route": "/dashboard/settings"
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "homepage",
+  "route": "/",
+  "title": "Hotel booking homepage",
+  "description": "Public discovery page where guests learn about the brand, search availability, and begin a reservation.",
+  "sourceEntry": "client/src/pages/HomePage.tsx",
+  "access": "public",
+  "dataDependencies": [
+    "hotels",
+    "availability"
+  ],
+  "componentDependencies": [
+    "client/src/components/search-form.tsx"
+  ],
+  "editableSections": [
+    "homepage.hero",
+    "booking.search"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "UPDATE_ASSET",
+    "CONFIGURE_COMPONENT",
+    "CREATE_COMPONENT_VARIANT"
+  ],
+  "featureSlots": [
+    "hotel.guest-experience"
+  ],
+  "preview": {
+    "url": "/",
+    "fixture": "page-manifests/homepage/fixtures.json"
+  },
+  "verification": [
+    "homepage-renders",
+    "search-navigation-works"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth",
+    "server/src/modules/hotels"
+  ]
+}

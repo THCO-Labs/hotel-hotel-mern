@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "lookup",
+  "route": "/lookup",
+  "title": "Find a reservation",
+  "description": "Public lookup where a guest retrieves an existing reservation using its reference and email.",
+  "sourceEntry": "client/src/pages/LookupPage.tsx",
+  "access": "public",
+  "dataDependencies": [
+    "reservations"
+  ],
+  "componentDependencies": [],
+  "editableSections": [
+    "lookup.form"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [],
+  "preview": {
+    "url": "/lookup",
+    "fixture": "page-manifests/lookup/fixtures.json"
+  },
+  "verification": [
+    "lookup-form-renders"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth",
+    "server/src/modules/reservations"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "register",
+  "route": "/register",
+  "title": "Create an account",
+  "description": "Guest sign-up capturing name, email and password.",
+  "sourceEntry": "client/src/pages/RegisterPage.tsx",
+  "access": "public",
+  "dataDependencies": [
+    "users"
+  ],
+  "componentDependencies": [
+    "client/src/features/auth/RegisterForm.tsx"
+  ],
+  "editableSections": [
+    "auth.register"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [],
+  "preview": {
+    "url": "/register",
+    "fixture": "page-manifests/register/fixtures.json"
+  },
+  "verification": [
+    "register-form-renders"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth"
+  ]
+}

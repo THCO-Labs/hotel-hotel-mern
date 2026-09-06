@@ -1,0 +1,7 @@
+{
+  "description": "Property page where guests review a hotel, its amenities and rooms, then choose a room to reserve.",
+  "route": "/hotels/evergreen-grand-hotel",
+  "routeParams": {
+    "slug": "evergreen-grand-hotel"
+  }
+}

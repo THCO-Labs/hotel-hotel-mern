@@ -1,0 +1,4 @@
+{
+  "description": "Booking form where the guest confirms dates and room, then supplies contact details. No payment is taken.",
+  "route": "/booking"
+}

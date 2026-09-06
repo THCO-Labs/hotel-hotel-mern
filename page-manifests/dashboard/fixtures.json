@@ -1,0 +1,4 @@
+{
+  "description": "Staff overview with occupancy and reservation metrics for the property.",
+  "route": "/dashboard"
+}

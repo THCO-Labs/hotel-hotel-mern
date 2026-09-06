@@ -1,0 +1,36 @@
+{
+  "header": {
+    "nav": [
+      { "label": "Home", "href": "/" },
+      { "label": "Search", "href": "/search" },
+      { "label": "My Booking", "href": "/lookup" }
+    ],
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "account": "Account",
+    "dashboard": "Dashboard"
+  },
+  "footer": {
+    "note": "No online payment.",
+    "links": [
+      { "label": "Find a stay", "href": "/search" },
+      { "label": "My booking", "href": "/lookup" }
+    ]
+  },
+  "dashboard": {
+    "workspaceLabel": "Staff workspace",
+    "signOut": "Sign out",
+    "groups": {
+      "overview": "Overview",
+      "operations": "Operations",
+      "workspace": "Workspace"
+    },
+    "items": {
+      "dashboard": "Dashboard",
+      "reservations": "Reservations",
+      "hotels": "Hotels",
+      "rooms": "Rooms",
+      "settings": "Settings"
+    }
+  }
+}

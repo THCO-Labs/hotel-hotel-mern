@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "dashboard-chrome",
+  "route": "/dashboard",
+  "title": "Dashboard sidebar",
+  "description": "The sidebar shown on every staff dashboard screen. Editing it here changes all five of them at once. Link labels can also be changed without code through the dashboard.chrome configuration surface; which routes exist stays in code.",
+  "sourceEntry": "client/src/components/dashboard-nav.tsx",
+  "access": "staff",
+  "dataDependencies": [],
+  "componentDependencies": [],
+  "editableSections": [
+    "dashboard.navigation"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [],
+  "preview": {
+    "url": "/dashboard",
+    "fixture": "page-manifests/dashboard-chrome/fixtures.json"
+  },
+  "verification": [
+    "sidebar-renders"
+  ],
+  "protectedDependencies": [
+    "client/src/config/app-config.ts",
+    "client/src/navigation"
+  ]
+}

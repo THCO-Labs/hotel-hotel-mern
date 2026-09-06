@@ -1,0 +1,4 @@
+{
+  "description": "Staff editor for hotel records, descriptions and amenities.",
+  "route": "/dashboard/hotels"
+}

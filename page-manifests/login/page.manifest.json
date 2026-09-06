@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "login",
+  "route": "/login",
+  "title": "Sign in",
+  "description": "Email and password sign-in for returning guests and staff.",
+  "sourceEntry": "client/src/pages/LoginPage.tsx",
+  "access": "public",
+  "dataDependencies": [
+    "users"
+  ],
+  "componentDependencies": [
+    "client/src/features/auth/LoginForm.tsx"
+  ],
+  "editableSections": [
+    "auth.login"
+  ],
+  "allowedOperations": [
+    "UPDATE_CONTENT",
+    "UPDATE_DESIGN_TOKEN",
+    "CONFIGURE_COMPONENT"
+  ],
+  "featureSlots": [],
+  "preview": {
+    "url": "/login",
+    "fixture": "page-manifests/login/fixtures.json"
+  },
+  "verification": [
+    "login-form-renders"
+  ],
+  "protectedDependencies": [
+    "server/src/common/db",
+    "server/src/modules/auth"
+  ]
+}

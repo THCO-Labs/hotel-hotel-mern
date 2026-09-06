@@ -1,0 +1,4 @@
+{
+  "description": "Email and password sign-in for returning guests and staff.",
+  "route": "/login"
+}
